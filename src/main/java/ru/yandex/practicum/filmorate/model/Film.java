@@ -21,12 +21,12 @@ public class Film {
     Duration duration;
 
     @JsonGetter("duration")
-    public long getDurationInMinutes() {
-        return duration.toMinutes();
+    public long getDurationInSeconds() {
+        return duration.getSeconds();
     }
 
     @JsonSetter("duration")
-    public void durationInMinutes(long duration) {
-        this.duration = Duration.ofMinutes(duration);
+    public void setDurationInSeconds(long durationInSeconds) {
+        this.duration = Duration.ofSeconds(durationInSeconds);
     }
 }
