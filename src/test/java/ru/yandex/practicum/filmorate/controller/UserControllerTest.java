@@ -18,7 +18,7 @@ public class UserControllerTest {
                 .login("testLogin")
                 .name("testName")
                 .email("testemail@mail.com")
-                .birthday(LocalDate.of(2000, 1, 1))
+                .birthday(LocalDate.of(2000, 3, 1))
                 .build();
         controller.create(user);
         assertEquals(1, controller.findAll().size());
